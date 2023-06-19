@@ -151,7 +151,7 @@ You can pass a query parameter `&hide=` to hide any specific stats with comma-se
 
 You can pass a query parameter `&show=` to show any specific additional stats with comma-separated values.
 
-> Options: `&show=reviews`
+> Options: `&show=reviews,discussions_started,discussions_answered`
 
 ```md
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&show=reviews)
@@ -304,7 +304,7 @@ You can provide multiple comma-separated values in the bg\_color option to rende
 *   `hide_title` - *(boolean)*. Default: `false`.
 *   `card_width` - Set the card's width manually *(number)*. Default: `500px  (approx.)`.
 *   `hide_rank` - *(boolean)* hides the rank and automatically resizes the card width. Default: `false`.
-*   `rank_icon` - Shows alternative rank icon (i.e. `github` or `default`). Default: `default`.
+*   `rank_icon` - Shows alternative rank icon (i.e. `github`, `progress` or `default`). Default: `default`.
 *   `show_icons` - *(boolean)*. Default: `false`.
 *   `include_all_commits` - Count total commits instead of just the current year commits *(boolean)*. Default: `false`.
 *   `line_height` - Sets the line height between text *(number)*. Default: `25`.
@@ -314,7 +314,7 @@ You can provide multiple comma-separated values in the bg\_color option to rende
 *   `disable_animations` - Disables all animations in the card *(boolean)*. Default: `false`.
 *   `ring_color` - Color of the rank circle *(hex color)*. Defaults to the theme ring color if it exists and otherwise the title color.
 *   `number_format` - Switch between two available formats for displaying the card values `short` (i.e. `6.6k`) and `long` (i.e. `6626`). Default: `short`.
-*   `show` - Show [additional items](#showing-additional-individual-stats) on stats card (i.e. `reviews`) *(Comma-separated values)*. Default: `[] (blank array)`.
+*   `show` - Show [additional items](#showing-additional-individual-stats) on stats card (i.e. `reviews`, `discussions_started` or `discussions_answered`) *(Comma-separated values)*. Default: `[] (blank array)`.
 
 > **Note**
 > When hide\_rank=`true`, the minimum card width is 270 px + the title length and padding.
@@ -375,7 +375,7 @@ Endpoint: `api/pin?username=anuraghazra&repo=github-readme-stats`
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra\&repo=github-readme-stats)
 
-Use [show\_owner](#customization) variable to include the repo's owner username
+Use [show\_owner](#repo-card-exclusive-options) query option to include the repo's owner username
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra\&repo=github-readme-stats\&show_owner=true)
 
@@ -541,9 +541,9 @@ Change the `?username=` value to your [Wakatime](https://wakatime.com) username.
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra\&hide=contribs,issues)
 
-*   Showing addition stats
+*   Showing additional stats
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show=reviews)
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra\&show=reviews,discussions_started,discussions_answered)
 
 *   Showing icons
 
@@ -552,6 +552,10 @@ Change the `?username=` value to your [Wakatime](https://wakatime.com) username.
 *   Shows Github logo instead rank level
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra\&rank_icon=github)
+
+*   Shows rank progress instead of rank level
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra\&rank_icon=progress)
 
 *   Customize Border Color
 
