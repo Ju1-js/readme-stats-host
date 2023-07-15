@@ -54,18 +54,12 @@ class Card {
     this.a11yDesc = "";
   }
 
-  /**
-   * @returns {void}
-   */
   disableAnimations() {
     this.animations = false;
   }
 
   /**
-   * @param {Object} props The props object.
-   * @param {string} props.title Accessibility title.
-   * @param {string} props.desc Accessibility description.
-   * @returns {void}
+   * @param {{title: string, desc: string}} prop
    */
   setAccessibilityLabel({ title, desc }) {
     this.a11yTitle = title;
@@ -73,24 +67,21 @@ class Card {
   }
 
   /**
-   * @param {string} value The CSS to add to the card.
-   * @returns {void}
+   * @param {string} value
    */
   setCSS(value) {
     this.css = value;
   }
 
   /**
-   * @param {boolean} value Whether to hide the border or not.
-   * @returns {void}
+   * @param {boolean} value
    */
   setHideBorder(value) {
     this.hideBorder = value;
   }
 
   /**
-   * @param {boolean} value Whether to hide the title or not.
-   * @returns {void}
+   * @param {boolean} value
    */
   setHideTitle(value) {
     this.hideTitle = value;
@@ -100,16 +91,12 @@ class Card {
   }
 
   /**
-   * @param {string} text The title to set.
-   * @returns {void}
+   * @param {string} text
    */
   setTitle(text) {
     this.title = text;
   }
 
-  /**
-   * @returns {string} The rendered card title.
-   */
   renderTitle() {
     const titleText = `
       <text
@@ -146,9 +133,6 @@ class Card {
     `;
   }
 
-  /**
-   * @returns {string} The rendered card gradient.
-   */
   renderGradient() {
     if (typeof this.colors.bgColor !== "object") return "";
 
@@ -172,8 +156,7 @@ class Card {
   }
 
   /**
-   * @param {string} body The inner body of the card.
-   * @returns {string} The rendered card.
+   * @param {string} body
    */
   render(body) {
     return `
